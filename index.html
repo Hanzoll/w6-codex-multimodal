@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Image Describer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Two Image Describer</h1>
+            <p>Select two images and let AI describe each one.</p>
+        </header>
+
+        <section class="card">
+            <div class="image-grid">
+                <div class="image-section">
+                    <h2>Image 1</h2>
+                    <label for="imageInput1">Choose your first image</label>
+                    <input type="file" id="imageInput1" accept="image/*">
+
+                    <div class="preview-container">
+                        <img id="imagePreview1" alt="Image 1 preview" hidden>
+                        <p id="placeholder1">Preview of Image 1</p>
+                    </div>
+                </div>
+
+                <div class="image-section">
+                    <h2>Image 2</h2>
+                    <label for="imageInput2">Choose your second image</label>
+                    <input type="file" id="imageInput2" accept="image/*">
+
+                    <div class="preview-container">
+                        <img id="imagePreview2" alt="Image 2 preview" hidden>
+                        <p id="placeholder2">Preview of Image 2</p>
+                    </div>
+                </div>
+            </div>
+
+            <button id="describeButton" type="button">
+                Describe Both Images
+            </button>
+
+            <p id="status" role="status" aria-live="polite">
+                Please select two images to begin.
+            </p>
+        </section>
+
+        <section class="results-grid">
+            <div class="card result-card">
+                <h2>Description of Image 1</h2>
+                <p id="description1">No description generated yet.</p>
+            </div>
+
+            <div class="card result-card">
+                <h2>Description of Image 2</h2>
+                <p id="description2">No description generated yet.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

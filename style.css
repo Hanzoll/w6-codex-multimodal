@@ -1,0 +1,150 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f5f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #304b91;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #666;
+}
+
+.card {
+    background: white;
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.image-grid,
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.image-section h2,
+.result-card h2 {
+    color: #304b91;
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fafafa;
+}
+
+.preview-container {
+    margin: 18px 0;
+    min-height: 220px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fc;
+    border: 2px dashed #cbd2e1;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.preview-container img {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.preview-container p {
+    color: #777;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #304b91;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+    background: #22386f;
+}
+
+button:disabled {
+    background: #929db8;
+    cursor: not-allowed;
+}
+
+#status {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.result-card p {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .image-grid,
+    .results-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    .preview-container {
+        min-height: 180px;
+    }
+}
